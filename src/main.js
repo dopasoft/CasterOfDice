@@ -7,6 +7,7 @@ import router from './router/index.js'
 import { policies } from './router/policies.js'
 import VueSweetalert2 from 'vue-sweetalert2'
 import Antd from 'ant-design-vue'
+import jquery from 'jquery'
 import _ from 'lodash'
 
 // require('ant-design-vue/dist/antd.css');
@@ -15,6 +16,7 @@ Vue.use(VueSweetalert2)
 Vue.use(Vuex)
 Vue.use(Antd)
 Object.defineProperty(Vue.prototype, '$_', {value: _})
+Object.defineProperty(Vue.prototype, '$', {value: jquery})
 Vue.config.productionTip = false
 
 const store = new Vuex.Store({

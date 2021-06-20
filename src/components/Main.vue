@@ -19,7 +19,7 @@
         </a-menu-item>
       </a-menu>
     </a-layout-header>
-    <a-layout-content style="padding: 0 50px">
+    <a-layout-content style="padding: 0 0px">
       <router-view></router-view>
     </a-layout-content>
     <a-layout-footer style="text-align: center">
