@@ -4,9 +4,9 @@ var path = require('path');
 
 module.exports = {
   app: {
-    title: 'QPass',
+    title: 'DOC',
     description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-    keywords: 'mongodb, express, angularjs, node.js, mongoose, passport',
+    keywords: 'mongodb, express, vue, node.js, mongoose, passport',
     googleAnalyticsTrackingID: process.env.GOOGLE_ANALYTICS_TRACKING_ID || 'GOOGLE_ANALYTICS_TRACKING_ID'
   },
   db: {
@@ -19,7 +19,7 @@ module.exports = {
   host: process.env.HOST || '0.0.0.0',
   // DOMAIN config should be set to the fully qualified application accessible
   // URL. For example: https://www.myapp.com (including port if required).
-  domain: process.env.DOMAIN || "https://qpass.51lz.net",
+  domain: process.env.DOMAIN || "https://www.doc.net",
   // Session Cookie settings
   sessionCookie: {
     // session expiration is set by default to 24 hours

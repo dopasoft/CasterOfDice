@@ -10,10 +10,9 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'Main',
       component: Main,
       children: [{
-        path: '/home',
+        path: '/',
         name: 'home',
         component: Home
       }]
