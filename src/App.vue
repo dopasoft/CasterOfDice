@@ -2,7 +2,7 @@
   <div id="app">
     
     <router-view></router-view>
-    <!-- <login-modal></login-modal> -->
+    <login-modal></login-modal>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import LoginModal from '@/components/login/LoginModal'
 export default {
   name: 'app',
   components: {
-    // 'loginModal': LoginModal,
+    'loginModal': LoginModal,
   }
 }
 </script>

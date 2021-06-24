@@ -3,15 +3,15 @@
     <p class="login-title">欢迎加入我们～！与全球玩家汇聚一堂</p>
     <div class="llc-media-box">
       <span class="chat"></span>
-      <p>关注并与全球的内容创作者建立联系</p>
+      <p>关注喜欢的KP并且申请加入战局</p>
     </div>
     <div class="llc-media-box">
       <span class="diamond"></span>
-      <p>每周都可免费获得一款精品产品</p>
+      <p>对人物卡面和效果展示进行自定义</p>
     </div>
     <div class="llc-media-box">
       <span class="tag"></span>
-      <p>轻松管理购买，下载和喜爱的产品</p>
+      <p>轻松管理人物和线索</p>
     </div>
     <a class="login-left-link" href="#" @click="$store.commit('changLogState', 'login')">已经有账号？>></a>
   </div>

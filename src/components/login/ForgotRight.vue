@@ -29,7 +29,8 @@ export default {
     padding-left: 60px;
     padding-right: 60px;
     height: 615px;
-    z-index: 1051;
+    position: relative;
+    z-index: 1;
   }
 
   .input-group input {

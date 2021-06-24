@@ -230,7 +230,7 @@ export default {
   }
   .jsi-cherry-container {
     width: 100%;
-    height: calc(100vh - 168px);
+    height: calc(100vh - 133px);
     margin: 0;
     padding: 0;
   }

@@ -60,6 +60,8 @@ export default {
     padding-left: 60px;
     padding-right: 60px;
     height: 615px;
+    position: relative;
+    z-index: 1;
   }
 
   .input-group input {

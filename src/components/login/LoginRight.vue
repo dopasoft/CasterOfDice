@@ -24,6 +24,7 @@
 </template>
 <script>
 import UserService from '@/services/UserService'
+import DicEnum from '@/assets/lib/DicMap'
 export default {
   name: 'LoginRight',
   data () {
@@ -41,7 +42,7 @@ export default {
         .then(res => {
           console.log(res)
           this.$store.commit('setUser', res.data)
-          //$('#loginModal').modal('hide')
+          this.$store.commit('changLogState', DicEnum.loginMode.CLOSE)
         })
         .catch(res => {
           console.log(res)
@@ -55,7 +56,8 @@ export default {
     padding-left: 60px;
     padding-right: 60px;
     height: 615px;
-    z-index: 1051;
+    position: relative;
+    z-index: 1;
   }
 
   .input-group input {

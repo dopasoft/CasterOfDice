@@ -1,24 +1,6 @@
 <template>
   <a-layout class="mainPage layout">
-    <a-layout-header>
-      <div class="logo" />
-      <a-menu
-        theme="dark"
-        mode="horizontal"
-        :default-selected-keys="['1']"
-        :style="{ lineHeight: '64px' }"
-      >
-        <a-menu-item key="1">
-          主页
-        </a-menu-item>
-        <a-menu-item key="2">
-          人物系统
-        </a-menu-item>
-        <a-menu-item key="3">
-          战局
-        </a-menu-item>
-      </a-menu>
-    </a-layout-header>
+    <header-nav></header-nav>
     <a-layout-content style="padding: 0 0px">
       <router-view></router-view>
     </a-layout-content>
@@ -29,9 +11,11 @@
 </template>
 
 <script>
+import HeaderNav from '@/components/HeaderNav'
 export default {
   name: 'Main',
   components: {
+    'headerNav': HeaderNav
   },
   data () {
     return {
