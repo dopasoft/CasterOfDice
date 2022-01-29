@@ -24,7 +24,7 @@
 </template>
 <script>
 import UserService from '@/services/UserService'
-import DicEnum from '@/assets/lib/DicMap'
+import { DicEnum } from '@/assets/lib/DicMap'
 export default {
   name: 'LoginRight',
   data () {
@@ -40,9 +40,9 @@ export default {
     login () {
       UserService.signin(this.user)
         .then(res => {
-          console.log(res)
           this.$store.commit('setUser', res.data)
           this.$store.commit('changLogState', DicEnum.loginMode.CLOSE)
+          this.$swal.fire("欢迎回来，" + res.data.displayName + "。")
         })
         .catch(res => {
           console.log(res)

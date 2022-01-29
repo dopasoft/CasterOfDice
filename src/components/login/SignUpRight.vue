@@ -46,7 +46,9 @@ export default {
       this.user.username = this.user.email
       UserService.signup(this.user)
         .then(res => {
-          console.log(res)
+          this.$store.commit('setUser', res.data)
+          this.$store.commit('changLogState', DicEnum.loginMode.CLOSE)
+          this.$swal.fire("欢迎加入，" + res.data.displayName + "。")
         })
         .catch(res => {
           console.log(res.response.data)

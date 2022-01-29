@@ -13,28 +13,32 @@
         </router-link>
       </a-menu-item>
       <a-menu-item key="2">
-        人物系统
+        <router-link to="/character">
+          人物系统
+        </router-link>
       </a-menu-item>
       <a-menu-item key="3">
         战局
       </a-menu-item>
-      <a-menu-item :disabled='true'>
+      <a-menu-item :disabled='true' class="title-mune">
         <ul class="nav nav-pills nav-main">
           <li v-if="!user">
             <a href="#" @click="$store.commit('changLogState', 'login')">登录</a>
           </li>
-          <li v-if="user" class="dropdown nb-dropdown">
-            <a class="dropdown-toggle nav-avatar" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" id="dropdownMenu2">
-              <img :src="user.profileImageURL" alt="">
-            </a>
-            <ul class="dropdown-menu nb-dropdown-menu-one" aria-labelledby="dropdownMenu2">
-              <li><p class="dis-name">hey, {{user.displayName}}</p></li>
-              <li role="separator" class="divider nb-divider"></li>
-              <li><router-link href="#" to="/personalCenter/recent"> 个人资料</router-link></li>
-              <li><router-link href="#" to="/personalCenter/bill"> 账户明细</router-link></li>
-              <li><router-link href="#" to="/profile"> 账户设置</router-link></li>
-              <li><a href="#" @click="logout()"> 退出</a></li>
-            </ul>
+          <li v-if="user" class="dropdown hn-dropdown">
+            <a-dropdown>
+              <a class="nav-avatar" href="#" role="button" aria-haspopup="true" @click="e => e.preventDefault()">
+                <img :src="user.profileImageURL" alt="">
+              </a>
+              <a-menu slot="overlay">
+                <a-menu-item><p class="dis-name">hey, {{user.displayName}}</p></a-menu-item>
+                <a-menu-item role="separator" class="divider nb-divider"></a-menu-item>
+                <a-menu-item><router-link href="#" to="/personalCenter/recent"> 个人资料</router-link></a-menu-item>
+                <a-menu-item><router-link href="#" to="/personalCenter/bill"> 账户明细</router-link></a-menu-item>
+                <a-menu-item><router-link href="#" to="/profile"> 账户设置</router-link></a-menu-item>
+                <a-menu-item><a href="#" @click="logout()"> 退出</a></a-menu-item>
+              </a-menu>
+            </a-dropdown>
           </li>
         </ul>
       </a-menu-item>
@@ -60,9 +64,21 @@ export default {
   mounted () {
     console.log(this.user)
   },
-  methods: {}
+  methods: {
+    logout() {
+      return this.$store.commit('logout')
+    }
+  }
 }
 </script>
 <style type="text/css">
+  .nav-avatar > img {
+    height: 40px;
+    border-radius: 20px;
+  }
 
+  .title-mune {
+    cursor: pointer;
+    float: right;
+  }
 </style>

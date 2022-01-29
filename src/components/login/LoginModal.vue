@@ -31,7 +31,7 @@ import LoginLeft from '@/components/login/LoginLeft'
 import LoginRight from '@/components/login/LoginRight'
 import ForgotLeft from '@/components/login/ForgotLeft'
 import ForgotRight from '@/components/login/ForgotRight'
-import DicEnum from '@/assets/lib/DicMap'
+import { DicEnum } from '@/assets/lib/DicMap'
 export default {
   name: 'login-modal',
   components: {
